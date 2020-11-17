@@ -9,15 +9,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class UserDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int sno;
-	
+
 	@Column(name = "name")
-	private String name;
-	
+	private String userName;
+
 	@Column(name = "password")
 	private String password;
 
@@ -29,12 +29,12 @@ public class User {
 		this.sno = sno;
 	}
 
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
